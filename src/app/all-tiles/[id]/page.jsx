@@ -11,7 +11,7 @@ const TileDetails = async({params}) => {
         <div>
             <h1 className='font-bold text-3xl text-center my-5'>Details page</h1>
            <Card className='my-10 p-4'>
-             <div className='grid grid-cols-2'>
+             <div className='grid md:grid-cols-2'>
                 <div>
                 <Image src={tile.image} alt={tile.title} width={400} height={200} className='rounded-lg'></Image>
             </div>

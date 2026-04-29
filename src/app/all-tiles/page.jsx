@@ -1,4 +1,4 @@
-import TileCard from '@/component/TileCard';
+import SearchBar from '@/component/SearchBar';
 import React from 'react';
 
 const AllTiles = async() => {
@@ -7,11 +7,7 @@ const AllTiles = async() => {
     return (
         <div className='my-10'>
             <h1 className='text-3xl font-bold text-center'>The Tiles Gallery</h1>
-            <div className='grid md:grid-cols-4 gap-4 my-5'>
-                {
-                    tiles.map(tile =><TileCard key={tile.id} tile={tile}></TileCard>)
-                }
-            </div>
+            <SearchBar tiles={tiles}></SearchBar>
         </div>
     );
 };
