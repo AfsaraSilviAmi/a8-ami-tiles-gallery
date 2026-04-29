@@ -19,11 +19,15 @@ const SearchBar = ({tiles}) => {
         <Description>Enter the tile name to search for the tile</Description>
       </SearchField>
             </div>
-            <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4 my-5'>
+            {
+                filteredTiles.length > 0 ? (<div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4 my-5'>
                 {
-                    filteredTiles.map(tile =><TileCard key={tile.id} tile={tile}></TileCard>)
+                  filteredTiles.map(tile =><TileCard key={tile.id} tile={tile}></TileCard>)
                 }
-            </div>
+            </div>) : (<div className='flex justify-center items-center h-[80vh]'>
+                <div className='font-bold text-4xl text-gray-600'><span className='text-red-400'>NO</span> Tiles of such name is Found! Seach for another tile!</div>
+            </div>)
+            }
         </div>
     );
 };

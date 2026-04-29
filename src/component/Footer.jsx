@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
             <div className='space-y-2.5'>
                 <h3 className='font-bold text-lg'>Follow Us On:</h3>
-                <div className='flex gap-4'>
+                <div className='flex gap-4 text-xl'>
                     <Link href={"/"} className='text-blue-800'><FaFacebook></FaFacebook></Link>
                     <Link href={"/"} className='text-blue-400'> <FaTwitter></FaTwitter></Link>
                     <Link href={"/"} className='text-pink-500'>  <FaInstagram></FaInstagram></Link>

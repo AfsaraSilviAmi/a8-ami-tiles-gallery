@@ -1,5 +1,6 @@
 import { Card, Chip } from '@heroui/react';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 const TileDetails = async({params}) => {
@@ -7,6 +8,10 @@ const TileDetails = async({params}) => {
     const res = await fetch("https://a8-ami-tiles-gallery.vercel.app/data.json")
     const tiles = await res.json();
     const tile = tiles.find(item => item.id === id)
+
+    if(!tile){
+        notFound();
+    }
     return (
         <div>
             <h1 className='font-bold text-3xl text-center my-5'>Details page</h1>
