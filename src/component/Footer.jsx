@@ -7,7 +7,7 @@ import { FaTwitter } from 'react-icons/fa6';
 const Footer = () => {
     return (
         <div className=' bg-pink-50 shadow-xs'>
-        <div className='grid grid-cols-3 mt-5 w-11/12 mx-auto py-5'>
+        <div className='grid md:grid-cols-3 mt-5 w-11/12 mx-auto py-5'>
             <div className='space-y-1.5'>
                 <Link href={"/"} className='flex gap-3'> <Image
             src={"/logo.png"}
