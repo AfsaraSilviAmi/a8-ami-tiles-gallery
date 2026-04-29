@@ -9,7 +9,10 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+    "creator": "TileCraft Studio",
+    "styleDescription": "A calming ocean-inspired ceramic tile with glossy blue tones, perfect for bathrooms and coastal interiors.",
+    "tags": ["Blue", "Ocean", "Glossy", "Modern"]
   },
   {
     "id": "tile_002",
@@ -21,7 +24,10 @@
     "currency": "USD",
     "dimensions": "60x60 cm",
     "material": "Marble",
-    "inStock": true
+    "inStock": true,
+    "creator": "LuxStone Works",
+    "styleDescription": "Classic Italian marble with soft grey veining for luxury interiors.",
+    "tags": ["White", "Luxury", "Classic", "Elegant"]
   },
   {
     "id": "tile_003",
@@ -33,7 +39,10 @@
     "currency": "USD",
     "dimensions": "30x30 cm",
     "material": "Clay",
-    "inStock": true
+    "inStock": true,
+    "creator": "Rustic Earth Studio",
+    "styleDescription": "Warm Mediterranean-style terracotta tile with earthy tones.",
+    "tags": ["Rustic", "Warm", "Earthy", "Orange"]
   },
   {
     "id": "tile_004",
@@ -45,7 +54,10 @@
     "currency": "USD",
     "dimensions": "40x40 cm",
     "material": "Slate",
-    "inStock": false
+    "inStock": false,
+    "creator": "StoneEdge Designs",
+    "styleDescription": "Durable slate tile ideal for outdoor and industrial spaces.",
+    "tags": ["Grey", "Matte", "Outdoor", "Industrial"]
   },
   {
     "id": "tile_005",
@@ -57,7 +69,10 @@
     "currency": "USD",
     "dimensions": "30x30 cm",
     "material": "Glass",
-    "inStock": true
+    "inStock": true,
+    "creator": "AquaMosaic Co",
+    "styleDescription": "Shimmering emerald mosaic tiles that reflect light beautifully.",
+    "tags": ["Green", "Glass", "Mosaic", "Luxury"]
   },
   {
     "id": "tile_006",
@@ -69,7 +84,10 @@
     "currency": "USD",
     "dimensions": "20x120 cm",
     "material": "Porcelain",
-    "inStock": true
+    "inStock": true,
+    "creator": "NatureFloor Studio",
+    "styleDescription": "Wood-look porcelain tile combining warmth of wood with durability.",
+    "tags": ["Wood", "Natural", "Warm", "Modern"]
   },
   {
     "id": "tile_007",
@@ -81,7 +99,10 @@
     "currency": "USD",
     "dimensions": "10x20 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+    "creator": "UrbanTile Works",
+    "styleDescription": "Minimal clean subway tile perfect for kitchens and bathrooms.",
+    "tags": ["White", "Minimal", "Clean", "Modern"]
   },
   {
     "id": "tile_008",
@@ -93,7 +114,10 @@
     "currency": "USD",
     "dimensions": "25x25 cm",
     "material": "Porcelain",
-    "inStock": true
+    "inStock": true,
+    "creator": "HexaDesign Studio",
+    "styleDescription": "Bold geometric black hexagon tile for modern interiors.",
+    "tags": ["Black", "Geometric", "Modern", "Bold"]
   },
   {
     "id": "tile_009",
@@ -105,7 +129,10 @@
     "currency": "USD",
     "dimensions": "45x45 cm",
     "material": "Travertine",
-    "inStock": false
+    "inStock": false,
+    "creator": "EarthStone Collective",
+    "styleDescription": "Natural travertine stone with soft earthy tones for outdoor use.",
+    "tags": ["Beige", "Natural", "Outdoor", "Rustic"]
   },
   {
     "id": "tile_010",
@@ -117,6 +144,9 @@
     "currency": "USD",
     "dimensions": "15x15 cm",
     "material": "Ceramic",
-    "inStock": true
+    "inStock": true,
+    "creator": "AquaArt Tiles",
+    "styleDescription": "Decorative fish-scale tile inspired by ocean waves and sea textures.",
+    "tags": ["Teal", "Ocean", "Decorative", "Unique"]
   }
 ]
