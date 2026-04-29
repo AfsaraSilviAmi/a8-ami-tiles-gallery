@@ -72,7 +72,7 @@ const NavBar = () => {
               <Link href={"/signup"}>SignUp</Link>
             </li>
             <li>
-              <Link href={"/signin"}>SignIn</Link>
+              <Link href={"/signin"}>Login</Link>
             </li>
           </ul>
         </div>
