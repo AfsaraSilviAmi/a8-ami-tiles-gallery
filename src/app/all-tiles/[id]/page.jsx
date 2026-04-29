@@ -13,14 +13,23 @@ const TileDetails = async({params}) => {
            <Card className='my-10 p-4'>
              <div className='grid grid-cols-2'>
                 <div>
-                <Image src={tile.image} alt={tile.title} width={400} height={200}></Image>
+                <Image src={tile.image} alt={tile.title} width={400} height={200} className='rounded-lg'></Image>
             </div>
-            <div>
-                <p>{tile.title}</p>
-                <p>{tile.description}</p>
-                <div>
-                    <Chip color='success'>{tile.material}</Chip>
-                    <Chip color='accent'>{tile.dimensions}</Chip>
+            <div className='space-y-8'>
+                <p className='text-3xl font-semibold'>{tile.title}</p>
+               <div className='flex gap-4'><p className='text-xl font-semibold'>Creator:  <Chip className='text-[15px]'>{tile.creator}</Chip></p></div>
+                <p className='text-gray-700 font-semibold'>{tile.styleDescription}</p>
+                <div className='flex gap-5'>
+                    <Chip color='success' variant="primary" className='text-lg p-2 px-3'>{tile.material}</Chip>
+                    <Chip color='warning' variant="primary" className='text-lg p-2 px-3'>{tile.dimensions}</Chip>
+                    <Chip color='danger' variant="primary" className='text-lg p-2 px-3'>${tile.price}</Chip>
+                </div>
+                <div className='flex gap-4'>
+                    {
+                        tile.tags.map((tag, index)=> {
+                            return <Chip color="accent" key={index} className='text-lg p-2 px-3'>{tag}</Chip>
+                        })
+                    }
                 </div>
             </div>
             </div>
