@@ -5,6 +5,7 @@ import {Button, Description, FieldError, Form, Input, Label, TextField} from "@h
 import { authClient } from '@/lib/auth-client';
 import {Icon} from "@iconify/react";
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 
 
 const LogInPage = () => {
@@ -21,10 +22,10 @@ const LogInPage = () => {
     callbackURL: "/",
 });
 if(!error){
-    alert("Login Successful!")
+    toast("Login Successful!")
 }
 if(error){
-    alert(error.message)
+    toast.error(error.message)
 }
     }
     const handleGoogleSignIn = async()=>{
@@ -35,7 +36,7 @@ if(error){
     return (
         <div className='flex justify-center items-center h-[80vh]'>
              <Form className="flex w-96 flex-col gap-4 bg-gray-100 p-6 rounded-lg shadow-xs" onSubmit={onSubmit}>
-                <h1>Login Your Account</h1>
+                <h1 className='font-semibold text-xl text-center'>Login Your Account</h1>
       <TextField
         isRequired
         name="email"
@@ -48,7 +49,7 @@ if(error){
         }}
       >
         <Label>Email</Label>
-        <Input placeholder="john@example.com" />
+        <Input placeholder="Enter Your email address" />
         <FieldError />
       </TextField>
       <TextField
@@ -75,15 +76,15 @@ if(error){
         <FieldError />
       </TextField>
       <div className="flex gap-2">
-        <Button type="submit">
+        <Button type="submit" className="bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500">
           <Check />
-          Submit
+          Login
         </Button>
-        <Button type="reset" variant="secondary">
+        <Button type="reset" className="bg-gray-200 text-pink-500">
           Reset
         </Button>
       </div>
-      <div className='flex justify-center'>OR</div>
+      <div className='flex justify-center font-semibold text-pink-400 text-xl'>OR</div>
       <div>
          <Button onClick={handleGoogleSignIn} className="w-full" variant="tertiary">
         <Icon icon="devicon:google" />

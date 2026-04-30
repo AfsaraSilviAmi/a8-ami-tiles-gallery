@@ -1,9 +1,12 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import { Button, Form, Input, Label, TextField } from '@heroui/react';
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const UpdateProfileForm = () => {
+     const router = useRouter();
     const onSubmit = async(e)=>{
         e.preventDefault();
 
@@ -13,9 +16,12 @@ const UpdateProfileForm = () => {
          await authClient.updateUser(
             {
                 name,
-                image
+                image,
+                
             }
          )
+         toast("Profile update sucessful")
+         router.push("/profile")
 
     }
     return (

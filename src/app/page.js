@@ -9,6 +9,7 @@ export default function Home() {
       <Banner></Banner>
       <MarqueeSection></MarqueeSection>
       <TopTiles></TopTiles>
+      
     </div>
   );
 }

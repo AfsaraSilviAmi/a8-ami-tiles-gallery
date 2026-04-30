@@ -4,6 +4,7 @@ import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
     const router = useRouter();
@@ -24,16 +25,19 @@ const SignUpPage = () => {
     });
 
     if(!error){
-        alert("SignUp Successful!")
+       toast("SignUp Successful!!")
         router.push("/signin")
 
+    }
+    if(error){
+      toast.error(error.message)
     }
         }
     return (
         <div>
             <div className='flex justify-center items-center h-[80vh]'>
              <Form className="flex w-96 flex-col gap-4 bg-gray-100 p-6 rounded-lg shadow-xs" onSubmit={onSubmit}>
-                <h1>SignUp Here</h1>
+                <h1 className='font-semibold text-xl text-center'>Register Here</h1>
                 <TextField
         isRequired
         name="name"
@@ -66,7 +70,7 @@ const SignUpPage = () => {
         }}
       >
         <Label>Email</Label>
-        <Input placeholder="john@example.com" />
+        <Input placeholder="Enter your email address" />
         <FieldError />
       </TextField>
       <TextField
@@ -93,11 +97,11 @@ const SignUpPage = () => {
         <FieldError />
       </TextField>
       <div className="flex gap-2">
-        <Button type="submit">
+        <Button type="submit" className='bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500' >
           <Check />
-          Submit
+          Register
         </Button>
-        <Button type="reset" variant="secondary">
+        <Button type="reset" className='bg-gray-200 text-pink-400'>
           Reset
         </Button>
       </div>

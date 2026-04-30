@@ -14,7 +14,7 @@ const ProfilePage = () => {
         <div className='my-10'>
            
                 <p className='font-bold text-3xl text-center text-pink-500 mb-5'>Welcome, <span className='text-black'>{user?.name}</span></p>
-                 <Card className='flex flex-col justify-center items-center h-[60vh] shadow-2xl w-[40%] mx-auto'>
+                 <Card className='flex flex-col justify-center items-center h-[60vh] shadow-2xl md:w-[40%] mx-auto'>
                 <Avatar className='w-40 h-40'>
                         <Avatar.Image alt={user?.name} src={user?.image} referrerPolicy='no-referrer' />
                         <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
