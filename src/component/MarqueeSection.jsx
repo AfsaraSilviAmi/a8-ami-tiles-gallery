@@ -35,7 +35,7 @@ const MarqueeSection = () => {
 ]
     return (
         <div className='flex bg-gray-200 py-4 rounded-lg'>
-           <Button className="rounded-lg bg-linear-to-r from-yellow-300 via-purple-500 to-pink-600">New Tiles</Button>
+           <Button className="rounded-lg bg-linear-to-r from-yellow-300 via-purple-500 to-pink-600">New Arrivals</Button>
             <Marquee>
              {
                 tilesNews.map(item => <span key={item.id} className='mx-8'>{item.text}</span>)
