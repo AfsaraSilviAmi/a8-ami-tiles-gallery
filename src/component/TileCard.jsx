@@ -13,7 +13,7 @@ const TileCard = ({tile}) => {
                 </div>
                 <p className='font-semibold text-lg'>{tile.title}</p>
                 <p className='text-purple-700 font-bold'>${tile.price}</p>
-                <Link href={`/all-tiles/${tile.id}`}><Button className="w-full bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500">View Details</Button></Link>
+                <Link href={`/all-tiles/${tile.id}`}><Button className="w-full bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500 animate__animated animate__pulse animate__infinite animate__slow">View Details</Button></Link>
             </Card>
         </div>
     );

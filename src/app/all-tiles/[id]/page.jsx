@@ -27,7 +27,7 @@ const TileDetails = async({params}) => {
                 <div className='flex gap-5'>
                     <Chip color='success' variant="primary" className='text-lg p-2 px-3'>{tile.material}</Chip>
                     <Chip color='warning' variant="primary" className='text-lg p-2 px-3'>{tile.dimensions}</Chip>
-                    <Chip color='danger' variant="primary" className='text-lg p-2 px-3'>${tile.price}</Chip>
+                    <Chip color='danger' variant="primary" className='text-lg p-2 px-3 animate__animated animate__pulse animate__infinite animate__slow'>${tile.price}</Chip>
                 </div>
                 <div className='flex gap-4'>
                     {

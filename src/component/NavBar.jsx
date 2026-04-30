@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation'
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
+import 'animate.css';
 
 const NavBar = () => {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,7 +79,7 @@ const NavBar = () => {
           {
             !user && (<ul className="flex items-center  text-sm">
             <li>
-              <Link href={"/signin"}><Button className="bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500">Login</Button></Link>
+              <Link href={"/signin"}><Button className="bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500 animate__animated animate__pulse animate__infinite animate__slow">Login</Button></Link>
             </li>
           </ul>)
           }

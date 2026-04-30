@@ -2,6 +2,7 @@ import { Button } from '@heroui/react';
 import Link from 'next/link';
 import React from 'react';
 
+
 const Banner = () => {
     return (
         <div className='my-10 '>
@@ -26,7 +27,7 @@ const Banner = () => {
     }}>Aesthetic</span>
           </h1>
            <Link href={"/all-tiles"}>
-            <Button className="bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 text-lg py-5 px-6 border-purple-400 border-2 mt-10 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500">Browse Now</Button>
+            <Button className="bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 text-lg py-5 px-6 border-purple-400 border-2 mt-10 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500 animate__animated animate__pulse animate__infinite animate__slow">Browse Now</Button>
           </Link>
           </div>
          

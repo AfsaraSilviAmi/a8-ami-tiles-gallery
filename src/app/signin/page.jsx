@@ -6,9 +6,11 @@ import { authClient } from '@/lib/auth-client';
 import {Icon} from "@iconify/react";
 import Link from 'next/link';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 
 const LogInPage = () => {
+  const router = useRouter()
     const onSubmit = async(e) =>{
          e.preventDefault();
 
@@ -19,10 +21,13 @@ const LogInPage = () => {
     email, // required
     password, // required
     rememberMe: true,
-    callbackURL: "/",
+    
 });
 if(!error){
     toast("Login Successful!")
+   setTimeout(() => {
+    router.push("/")
+  }, 1500) // 1.5 seconds
 }
 if(error){
     toast.error(error.message)
@@ -32,6 +37,7 @@ if(error){
         const data = await authClient.signIn.social({
     provider: "google",
   });
+  toast("Login Successful!")
     }
     return (
         <div className='flex justify-center items-center h-[80vh]'>

@@ -20,7 +20,7 @@ const UpdateProfileForm = () => {
                 
             }
          )
-         toast("Profile update sucessful")
+         toast("Profile updated sucessfully!")
          router.push("/profile")
 
     }
