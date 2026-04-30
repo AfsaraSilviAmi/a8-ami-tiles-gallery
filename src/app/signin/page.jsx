@@ -23,6 +23,9 @@ const LogInPage = () => {
 if(!error){
     alert("Login Successful!")
 }
+if(error){
+    alert(error.message)
+}
     }
     const handleGoogleSignIn = async()=>{
         const data = await authClient.signIn.social({

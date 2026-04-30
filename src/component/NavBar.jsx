@@ -3,10 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation'
+import { authClient } from '@/lib/auth-client';
+import { Avatar, Button } from '@heroui/react';
 
 const NavBar = () => {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
      const pathname = usePathname()
+     const userData = authClient.useSession();
+     const user = userData.data?.user;
+
+     const handleLogOut = async() =>{
+      await authClient.signOut()
+     }
 
     return (
         <div>
@@ -67,14 +75,23 @@ const NavBar = () => {
         </ul>
 
         <div className="flex gap-4">
-          <ul className="flex items-center  text-sm">
+          {
+            !user && (<ul className="flex items-center  text-sm">
             <li>
-              <Link href={"/signup"}>SignUp</Link>
+              <Link href={"/signin"}><Button className="bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500">Login</Button></Link>
             </li>
-            <li>
-              <Link href={"/signin"}>Login</Link>
-            </li>
-          </ul>
+          </ul>)
+          }
+          {
+            user && (
+      <div className='flex items-center gap-2'>
+        <Avatar>
+        <Avatar.Image alt={user?.name} src={user?.image} referrerPolicy='no-referrer' />
+        <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+      </Avatar>
+      <Button onClick={handleLogOut} className="bg-linear-to-r from-pink-500 via-purple-500 to-yellow-300 transition-all duration-300 hover:scale-110 hover:from-blue-600 hover:via-blue-400 hover:to-blue-200 hover:border-blue-500">Logout</Button>
+      </div>)
+          }
         </div>
       
       </nav>
