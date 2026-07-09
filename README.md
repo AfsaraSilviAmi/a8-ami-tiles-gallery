@@ -1,107 +1,149 @@
 # 🧱 Tiles Gallery
 
-A modern and responsive web application for exploring, viewing tile gallery with authentication and user personalization features.
+A modern and responsive tile gallery web application where users can explore beautiful tile collections, view detailed information, and personalize their experience through secure authentication and profile management.
 
 ---
 
-## 🌐 Live URL  
-👉 https://a8-ami-tiles-gallery.vercel.app/
+## 🌐 Live Demo
+
+🔗 https://a8-ami-tiles-gallery.vercel.app/
 
 ---
 
-## 🎯 Project Purpose
+## 📖 Project Overview
 
-**Tiles Gallery** is built to provide a clean and interactive platform where users can:
-
-- Browse beautiful tile collections  
-- View detailed information about each tile  
-- Create an account and manage their profile  
-- Experience a personalized and secure interface  
-
-This project focuses on combining **UI design, authentication, and dynamic content rendering** into a real-world application.
+Tiles Gallery is a full-stack web application built with Next.js that showcases a collection of decorative tiles through a clean and responsive interface. Users can browse featured and complete tile collections, securely sign in, access protected tile details, and manage their personal profiles.
 
 ---
 
-## ✨ Key Features
+## 🎯 Purpose
+
+The goal of Tiles Gallery is to provide a visually appealing platform for exploring tile collections while demonstrating modern authentication, protected routes, responsive UI design, and dynamic content rendering using Next.js.
+
+---
+
+## ✨ Core Features
 
 ### 🏠 Homepage
-- Displays **featured/top tiles**
-- Clean and visually appealing hero/banner section
-- Quick navigation to explore tiles
+- Beautiful hero/banner section
+- Featured tile collections
+- Responsive and user-friendly layout
 
----
+### 🧱 Tile Gallery
+- Browse all available tiles
+- Card-based responsive layout
+- View detailed tile information
 
-### 🧩 All Tiles Page
-- Shows the complete collection of tiles
-- Card-based layout
-- Each tile includes a **"View Details"** option which can be accessed by only logged in users
+### 🔒 Protected Tile Details
+- Accessible only to authenticated users
+- Displays complete information for each tile
+- Secure route protection
 
----
-
-### 🔍 Tile Details Page *(Protected Route)*
-- Accessible **only for logged-in users**
-- Displays full tile information
-- Enhances user engagement with deeper insights
-
----
-
-### 🔐 Authentication System
-- User Registration (Sign Up)
-- Login with Email & Password
+### 👤 User Authentication
+- Email & Password Authentication
 - Google Sign-In (OAuth)
-- Secure session handling
+- BetterAuth Authentication
+- Secure session management
+
+### 🙍 User Profile
+- View profile information
+- Update name
+- Change profile picture
+
+### 🛡️ Route Protection
+- Profile page is protected
+- Tile Details page is protected
+- Unauthorized users are redirected to the login page
 
 ---
 
-### 👤 My Profile Page *(Protected Route)*
-- Accessible only after login
-- Displays user information
-- Users can:
-  - ✏️ Update their **name**
-  - 🖼️ Change their **profile picture**
+## 🛠️ Technologies Used
 
----
-
-### 🚫 Route Protection
-- Unauthorized users are redirected from:
-  - Profile page  
-  - Tile details page  
-
----
-
-## 🛠️ Technologies & Packages Used
-
-### ⚙️ Core Stack
+### Frontend
 - Next.js (App Router)
 - React
 - Tailwind CSS
-
----
-
-### 🎨 UI & Styling
 - HeroUI
 - Animate.css
 
----
-
-### 🔐 Authentication
-- Better Auth / Auth Client
+### Authentication
+- BetterAuth
 - Google OAuth
 
----
-
-### 🧰 Utilities
-- React Toastify (notifications)
+### Utilities
+- React Toastify
 - Iconify
 - Gravity UI Icons
 
 ---
 
-## 📦 NPM Packages
+## 📦 Dependencies
+
+### Client
 
 ```bash
-npm install react-toastify
-npm install @iconify/react
-npm install @gravity-ui/icons
-npm install @heroui/react
-npm install animate.css
+next
+react
+react-dom
+tailwindcss
+@heroui/react
+better-auth
+react-toastify
+@iconify/react
+@gravity-ui/icons
+animate.css
+```
+
+---
+
+## ⚙️ Run the Project Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/AfsaraSilviAmi/a8-ami-tiles-gallery.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd Tiles-Gallery
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file.
+
+Example:
+
+```env
+MONGODB_URI=your_mongodb_uri
+BETTER_AUTH_SECRET=your_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXT_PUBLIC_API_URL=your_api_url
+```
+
+### 4. Run the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📂 Resources
+
+- 🌐 Live Website: https://a8-ami-tiles-gallery.vercel.app/
+- 📁 Repository: https://github.com/AfsaraSilviAmi/a8-ami-tiles-gallery.git
+
+---
+
+## 🚀 Future Improvements
+
+- Search and filter tiles
+- Favorite/Wishlist functionality
+- Tile categories and sorting
+- User reviews and ratings
+- Admin dashboard for managing tile collections
